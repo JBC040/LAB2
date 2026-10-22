@@ -1,4 +1,4 @@
-package modelo.Productos;
+package Modelo.Productos;
 
 public abstract class ProductWithDescription extends Product {
     private String description;

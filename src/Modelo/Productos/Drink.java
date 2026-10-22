@@ -1,4 +1,4 @@
-package modelo.Productos;
+package Modelo.Productos;
 
 public class Drink extends Product {
     private int mililitros;

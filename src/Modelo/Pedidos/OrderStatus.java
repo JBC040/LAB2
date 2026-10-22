@@ -1,4 +1,4 @@
-package modelo.Pedidos;
+package Modelo.Pedidos;
 
 public enum OrderStatus {
     RECIBIDO,

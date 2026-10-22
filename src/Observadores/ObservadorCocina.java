@@ -1,7 +1,7 @@
 package Observadores;
 
-import modelo.Pedidos.Order;
-import modelo.Pedidos.OrderStatus;
+import Modelo.Pedidos.Order;
+import Modelo.Pedidos.OrderStatus;
 
 public class ObservadorCocina implements ObservadorPedido {
 

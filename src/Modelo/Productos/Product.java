@@ -1,4 +1,6 @@
-package modelo.Productos;
+package Modelo.Productos;
+
+import java.util.Objects;
 
 public abstract class Product {
     private String id;
@@ -19,12 +21,27 @@ public abstract class Product {
         this.initialPrize = initialPrize;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
 
     public double getInitialPrize() {
         return initialPrize;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Product product)) return false;
+        return Objects.equals(id, product.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 
     @Override

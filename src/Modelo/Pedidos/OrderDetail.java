@@ -1,5 +1,5 @@
-package modelo.Pedidos;
-import modelo.Productos.Product;
+package Modelo.Pedidos;
+import Modelo.Productos.Product;
 
 public class OrderDetail {
     private final Product product;

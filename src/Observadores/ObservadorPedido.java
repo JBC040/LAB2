@@ -1,7 +1,7 @@
 package Observadores;
 
-import modelo.Pedidos.OrderStatus;
-import modelo.Pedidos.Order;
+import Modelo.Pedidos.OrderStatus;
+import Modelo.Pedidos.Order;
 
 public interface ObservadorPedido {
     void update(Order order, OrderStatus previousStatus, OrderStatus newStatus);

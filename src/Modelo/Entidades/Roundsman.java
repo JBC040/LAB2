@@ -1,4 +1,6 @@
-package modelo.Entidades;
+package Modelo.Entidades;
+
+import java.util.Objects;
 
 public class Roundsman {
     private final String id;
@@ -48,6 +50,17 @@ public class Roundsman {
 
     public void registrarEntrega() {
         deliveries++;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Roundsman roundsman)) return false;
+        return Objects.equals(id, roundsman.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package modelo.Productos;
+package Modelo.Productos;
 
 public class Dish extends ProductWithDescription {
 

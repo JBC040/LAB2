@@ -1,4 +1,4 @@
-package modelo.Productos;
+package Modelo.Productos;
 
 public class Combo extends ProductWithDescription {
 

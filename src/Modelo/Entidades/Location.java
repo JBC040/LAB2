@@ -1,4 +1,6 @@
-package modelo.Entidades;
+package Modelo.Entidades;
+
+import java.util.Objects;
 
 public class Location {
     private final String id;
@@ -19,6 +21,17 @@ public class Location {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Location location)) return false;
+        return Objects.equals(id, location.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 
     @Override
