@@ -3,8 +3,8 @@ package modelo.Productos;
 public abstract class ProductWithDescription extends Product {
     private String description;
 
-    public ProductWithDescription(String name, double initialPrize, String description) {
-        super(name, initialPrize);
+    public ProductWithDescription(String id, String name, double initialPrize, String description) {
+        super(id, name, initialPrize);
         this.description = description;
     }
 

@@ -1,12 +1,20 @@
 package modelo.Productos;
 
-import java.util.Comparator;
-
-public abstract class Product implements Comparable <Product> {
+public abstract class Product {
+    private String id;
     private String name;
     private double initialPrize;
 
-    public Product(String name, double initialPrize) {
+    public Product(String id, String name, double initialPrize) {
+        if (id == null || id.isBlank()) {
+            throw new IllegalArgumentException("Código obligatorio");
+        }
+        if (initialPrize <= 0) {
+            throw new IllegalArgumentException("Precio inválido");
+        }
+
+
+        this.id = id;
         this.name = name;
         this.initialPrize = initialPrize;
     }
@@ -18,15 +26,6 @@ public abstract class Product implements Comparable <Product> {
     public double getInitialPrize() {
         return initialPrize;
     }
-
-    public abstract double calcPrize();
-
-    @Override
-    public int compareTo(Product o) {
-        return Double.compare (this.initialPrize, o.initialPrize);
-    }
-
-    Comparator <Product> comparatorName = Comparator.comparing(Product::getName);
 
     @Override
     public String toString() {

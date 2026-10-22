@@ -1,25 +1,20 @@
 package modelo.Productos;
 
 public class Drink extends Product {
-    private String type;
-    private String sour;
+    private int mililitros;
 
-    public Drink(String name, double initialPrize, String type, String sour) {
-        super(name, initialPrize);
-        this.type = type;
-        this.sour = sour;
+    public Drink(String id, String name, double initialPrize, int mililitros) {
+        if (mililitros <= 0) {
+            throw new IllegalArgumentException(
+                    "Los mililitros deben ser positivos"
+            );
+        }
+
+        super(id, name, initialPrize);
+        this.mililitros = mililitros;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public String getSour() {
-        return sour;
-    }
-
-    @Override
-    public double calcPrize() {
-        return 0;
+    public int getMililitros() {
+        return mililitros;
     }
 }
